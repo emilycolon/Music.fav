@@ -1,0 +1,42 @@
+[
+  {
+    "artistId": 1,
+    "name": "House Of Balloons / Glass Table Girls",
+    "albumName": "Trilogy"
+  },
+  {
+    "artistId": 1,
+    "name": "Loft Music",
+    "albumName": "Trilogy"
+  },
+  {
+    "artistId": 1,
+    "name": "False Alarm",
+    "albumName": "Starboy"
+  },
+  {
+    "artistId": 2,
+    "name": "Pynk (feat. Grimes)",
+    "albumName": "Dirty Computer"
+  },
+  {
+    "artistId": 4,
+    "name": "Do I Wanna Know?",
+    "albumName": "AM"
+  },
+  {
+    "artistId": 3,
+    "name": "Strangers on a Train",
+    "albumName": "Music To Make Love To Your Old Lady By"
+  },
+  {
+    "artistId": 4,
+    "name": "I Wanna Be Yours",
+    "albumName": "AM"
+  },
+  {
+    "artistId": 1,
+    "name": "The Hills",
+    "albumName": "The Beauty Behind The Madness"
+  }
+]
