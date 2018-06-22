@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+    <h1>TESTING ARTIST SHOW</h1>
+
+    <ul>
+        <% artists.forEach((artist)=> { %>
+            <li>
+                <%= artist.name %>
+            </li>
+            <% }); %>
+    </ul>
+
+    <%- include('../partials/footer') %>
