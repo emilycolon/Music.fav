@@ -5,7 +5,7 @@
     <ul>
         <% songs.forEach((song)=> { %>
             <li>
-                "<%= song.name %>" by <%= artist.name %>
+                "<%= song.title %>" <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a> <a href="#">DELETE BUTTON</a>
             </li>
             <% }); %>
     </ul>

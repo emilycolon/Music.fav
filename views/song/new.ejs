@@ -1,0 +1,17 @@
+<%- include('../partials/header')%>
+
+<h2>Favorite a New Song</h2>
+
+<form action="/song" method="post" accept-charset="utf-8">
+  <p>
+    <label>Song Title:</label>
+    <input type="text" name="title"/>
+  </p>
+  <p>
+  <label>Album Title:</label>
+  <input type="text" name="albumTitle"/>
+</p>
+  <input type="submit" value="Favorite" />
+</form>
+
+<%- include('../partials/footer')%>

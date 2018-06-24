@@ -1,5 +1,15 @@
 <%- include('../partials/header') %>
 
-<h1>TESTING SPECIFIC ARTIST SHOW</h1>
+<h1>TESTING SPECIFIC ARTIST EDIT</h1>
+
+<h2>Edit Artist:</h2>
+
+<form action="/artist/<%= artist.id %>?_method=put" method="post">
+  <p>
+    <label>Artist Name:</label>
+    <input type="text" value="<%= artist.name %>" name="name"/>
+  </p>
+  <input type="submit" value="Update" />
+</form>
 
 <%- include('../partials/footer') %>

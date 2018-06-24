@@ -1,5 +1,23 @@
 <%- include('../partials/header') %>
 
-<h1>TESTING SPECIFIC SONG SHOW</h1>
+<h1>TESTING SPECIFIC SONG EDIT</h1>
+
+<%- include('../partials/header') %>
+
+<h1>TESTING SPECIFIC ARTIST EDIT</h1>
+
+<h2>Edit Song:</h2>
+
+<form action="/song/<%= song.id %>?_method=put" method="post">
+  <p>
+    <label>Song Title:</label>
+    <input type="text" value="<%= song.title %>" name="title"/>
+  </p>
+  <p>
+  <label>Album Title:</label>
+  <input type="text" value="<%= song.albumTitle %>" name="albumTitle"/>
+</p>
+  <input type="submit" value="Update" />
+</form>
 
 <%- include('../partials/footer') %>
