@@ -5,7 +5,9 @@
     <ul>
         <% artists.forEach((artist)=> { %>
             <li>
-                <%= artist.name %> <a href="/artist/edit/<%= artist.id %>">EDIT BUTTON</a> <a href="#">DELETE BUTTON</a>
+                <%= artist.name %> <a href="/artist/edit/<%= artist.id %>">EDIT BUTTON</a> <form action="/artist/<%= artist.id %>?_method=delete" method="post">
+                <input type="submit" value="Remove">
+              </form>
             </li>
             <% }); %>
     </ul>

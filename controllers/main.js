@@ -79,6 +79,24 @@ router.put('/song/:id', (req, res) => {
     });
 });
 
+// delete artist
+router.delete('/artist/:id', (req, res) => {
+  Artist.findById(req.params.id).then(artist => {
+    artist.destroy().then(() => {
+      res.redirect('/artist');
+    });
+  });
+});
+
+// delete song
+router.delete('/song/:id', (req, res) => {
+  Song.find(req.params.id).then(song => {
+    song.destroy().then(() => {
+      res.redirect('/song');
+    });
+  });
+});
+
 module.exports = router;
 
 // testdb=# SELECT name FROM songs INNER JOIN artists ON songs.artistId = artists.Id;

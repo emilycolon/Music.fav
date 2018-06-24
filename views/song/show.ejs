@@ -5,7 +5,9 @@
     <ul>
         <% songs.forEach((song)=> { %>
             <li>
-                "<%= song.title %>" <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a> <a href="#">DELETE BUTTON</a>
+                "<%= song.title %>" <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a> <form action="/song/<%= song.id %>?_method=delete" method="post">
+                <input type="submit" value="Remove">
+              </form>
             </li>
             <% }); %>
     </ul>
