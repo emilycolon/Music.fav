@@ -57,12 +57,8 @@ router.post('/artist', (req, res) => {
 
 // post new song
 router.post('/song', (req, res) => {
-  console.log(req.body)
-  Song.create({
-    title: req.body.title,
-    albumTitle: req.body.albumTitle,
-    artistId: req.body.artistId
-  }).then(songs => {
+  console.log(req.body);
+  Song.create(req.body).then(songs => {
     res.redirect('/song');
   });
 });
