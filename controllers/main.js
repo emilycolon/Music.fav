@@ -22,7 +22,7 @@ router.get('/artist/new', (req, res) => {
 
 // new song
 router.get('/song/new', (req, res) => {
-  res.render('song/new');
+  Artist.findAll().then(artists => res.render('song/new', { artists }));
 });
 
 // edit artist
@@ -57,7 +57,12 @@ router.post('/artist', (req, res) => {
 
 // post new song
 router.post('/song', (req, res) => {
-  Song.create(req.body).then(songs => {
+  console.log(req.body)
+  Song.create({
+    title: req.body.title,
+    albumTitle: req.body.albumTitle,
+    artistId: req.body.artistId
+  }).then(songs => {
     res.redirect('/song');
   });
 });

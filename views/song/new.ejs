@@ -1,17 +1,27 @@
 <%- include('../partials/header')%>
 
-<h2>Favorite a New Song</h2>
+  <h2>Favorite a New Song</h2>
 
-<form action="/song" method="post" accept-charset="utf-8">
-  <p>
-    <label>Song Title:</label>
-    <input type="text" name="title"/>
-  </p>
-  <p>
-  <label>Album Title:</label>
-  <input type="text" name="albumTitle"/>
-</p>
-  <input type="submit" value="Favorite" />
-</form>
+  <form action="/song" method="post" accept-charset="utf-8">
+    <p>
+      <label>Song Title:</label>
+      <input type="text" name="title">
+    </p>
+    <p>
+      <label>Album Title:</label>
+      <input type="text" name="albumTitle">
+    </p>
+    <p>
+      <label>Artist: </label>
+      <select name="artistId">
+        <% artists.forEach((artist)=> { %>
+          <option value="<%= artist.id %>">
+            <%= artist.name %>
+          </option>
+          <% }); %>
+      </select>
+    </p>
+    <input type="submit" value="Favorite">
+  </form>
 
-<%- include('../partials/footer')%>
+  <%- include('../partials/footer')%>
