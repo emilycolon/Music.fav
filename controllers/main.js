@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const Artist = require('../db/connection').models.Artist;
-const Song = require('../db/connection').models.Song;
-let name = '';
+const { Artist, Song } = require('../db/connection').models;
+
+// const queryArtist = { include: [{ model: Artist }] };
+const querySong = { include: [{ model: Song }] };
 
 // home page
 router.get('/', (req, res) => {
@@ -40,7 +41,11 @@ router.get('/song/edit/:id', (req, res) => {
 
 // see all favorited songs
 router.get('/song', (req, res) => {
-  Song.findAll().then(songs => res.render('song/show', { songs }));
+  Song.findAll().then(songs =>
+    Artist.findAll().then(artists =>
+      res.render('song/show', { songs, artists })
+    )
+  );
 });
 
 // post new artist
@@ -98,5 +103,3 @@ router.delete('/song/:id', (req, res) => {
 });
 
 module.exports = router;
-
-// testdb=# SELECT name FROM songs INNER JOIN artists ON songs.artistId = artists.Id;

@@ -9,6 +9,9 @@ const sequelize = new Sequelize('music', 'inclassuser', 'Hartford1810', {
 const Artist = sequelize.import('../models/Artist');
 const Song = sequelize.import('../models/Song');
 
+Song.belongsTo(Artist);
+Artist.hasMany(Song);
+
 sequelize.authenticate().then(() => {
   console.log('Connected');
 });

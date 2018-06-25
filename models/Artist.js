@@ -1,6 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('artist', {
-    songId: { type: DataTypes.ARRAY(DataTypes.INTEGER) },
     name: DataTypes.STRING
   });
+
+  Artist.associate = models => {
+    Artist.hasMany(models.Song, {
+      foreignKey: 'artistId',
+      as: 'songs'
+    });
+  };
+
+  return Artist;
 };

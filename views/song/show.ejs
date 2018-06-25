@@ -3,11 +3,19 @@
     <h1>TESTING SONG SHOW</h1>
 
     <ul>
-        <% songs.forEach((song)=> { %>
+        <% songs.forEach((song) => { %>
             <li>
-                "<%= song.title %>" <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a> <form action="/song/<%= song.id %>?_method=delete" method="post">
-                <input type="submit" value="Remove">
-              </form>
+                "<%= song.title %>" by
+                    <% artists.forEach((artist) => { %>
+                        <% if (artist.id === song.artistId) { %>
+                            <% return name = artist.name; %>
+                                <% }; %>
+                                    <% }); %>
+                                        <%= name %>
+                                            <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a>
+                                            <form action="/song/<%= song.id %>?_method=delete" method="post">
+                                                <input type="submit" value="Remove">
+                                            </form>
             </li>
             <% }); %>
     </ul>
