@@ -35,7 +35,7 @@ router.get('/artist/edit/:id', (req, res) => {
 // edit song
 router.get('/song/edit/:id', (req, res) => {
   Song.findById(req.params.id).then(song => {
-    res.render('song/edit', { song });
+    Artist.findAll().then(artists => res.render('song/edit', { song, artists }));
   });
 });
 
@@ -57,7 +57,6 @@ router.post('/artist', (req, res) => {
 
 // post new song
 router.post('/song', (req, res) => {
-  console.log(req.body);
   Song.create(req.body).then(songs => {
     res.redirect('/song');
   });
