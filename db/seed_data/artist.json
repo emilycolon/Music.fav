@@ -1,18 +1,14 @@
 [
   {
-    "songId": [1, 2, 3, 8],
     "name": "The Weeknd"
   },
   {
-    "songId": [4],
     "name": "Janelle Monae"
   },
   {
-    "songId": [6],
     "name": "Lovage"
   },
   {
-    "songId": [5, 7],
     "name": "Arctic Monkeys"
   }
 ]

@@ -3,7 +3,7 @@ const router = express.Router();
 const { Artist, Song } = require('../db/connection').models;
 
 // const queryArtist = { include: [{ model: Artist }] };
-const querySong = { include: [{ model: Song }] };
+// const querySong = { include: [{ model: Song }] };
 
 // home page
 router.get('/', (req, res) => {
@@ -41,11 +41,11 @@ router.get('/song/edit/:id', (req, res) => {
 
 // see all favorited songs
 router.get('/song', (req, res) => {
-  Song.findAll().then(songs =>
-    Artist.findAll().then(artists =>
-      res.render('song/show', { songs, artists })
-    )
-  );
+  Song.findAll().then(songs => {
+    Artist.findAll().then(artists => {
+      res.render('song/show', { songs, artists });
+    });
+  });
 });
 
 // post new artist
@@ -87,15 +87,27 @@ router.put('/song/:id', (req, res) => {
 // delete artist
 router.delete('/artist/:id', (req, res) => {
   Artist.findById(req.params.id).then(artist => {
-    artist.destroy().then(() => {
-      res.redirect('/artist');
+    Song.findAll().then(song => {
+      Song.destroy({
+        where: {
+          artistId: req.params.id
+        }
+      }).then(artist => {
+        Artist.destroy({
+          where: {
+            id: req.params.id
+          }
+        }).then(() => {
+          res.redirect('/artist');
+        });
+      });
     });
   });
 });
 
 // delete song
 router.delete('/song/:id', (req, res) => {
-  Song.find(req.params.id).then(song => {
+  Song.findById(req.params.id).then(song => {
     song.destroy().then(() => {
       res.redirect('/song');
     });
