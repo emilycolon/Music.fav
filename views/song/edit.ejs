@@ -1,27 +1,32 @@
 <%- include('../partials/header')%>
-
-  <h1>Edit Song Details</h1>
-
-  <form action="/song/<%= song.id %>?_method=put" method="post">
-    <p>
-      <label>Song Title:</label>
-      <input type="text" value="<%= song.title %>" name="title">
-    </p>
-    <p>
-      <label>Album Title:</label>
-      <input type="text" value="<%= song.albumTitle %>" name="albumTitle">
-    </p>
-    <p>
-      <label>Artist: </label>
-      <select name="artistId">
-        <% artists.forEach((artist)=> { %>
-          <option value="<%= artist.id %>">
-            <%= artist.name %>
-          </option>
-          <% }); %>
-      </select>
-    </p>
-    <input type="submit" value="Update">
-  </form>
-
+<div class="flex">
+  <div class="content-container">
+    <div class="title">
+      <h1>Edit Song Details</h1>
+    </div>
+    <div class="content">
+      <form action="/song/<%= song.id %>?_method=put" method="post">
+        <p>
+          <label>Song Title:</label>
+          <input type="text" value="<%= song.title %>" name="title">
+        </p>
+        <p>
+          <label>Album Title:</label>
+          <input type="text" value="<%= song.albumTitle %>" name="albumTitle">
+        </p>
+        <p>
+          <label>Artist: </label>
+          <select name="artistId">
+            <% artists.forEach((artist)=> { %>
+              <option value="<%= artist.id %>">
+                <%= artist.name %>
+              </option>
+              <% }); %>
+          </select>
+        </p>
+        <input type="submit" value="Update">
+      </form>
+    </div>
+  </div>
+</div>
   <%- include('../partials/footer')%>

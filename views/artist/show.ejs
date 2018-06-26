@@ -1,22 +1,29 @@
 <%- include('../partials/header')%>
-
-<h1>Favorited Artists</h1>
-
-    <ul>
-        <% artists.forEach((artist)=> { %>
-            <li>
-                <%= artist.name %>
-                    <a href="/artist/edit/<%= artist.id %>">
-                        <i class="far fa-edit"></i>
-                    </a>
-                    <form method="POST" action="/artist/<%= artist.id %>?_method=delete">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit">
-                            <i class="far fa-times-circle"></i>
-                        </button>
-                    </form>
-            </li>
-            <% }); %>
-    </ul>
-
+    <div class="flex">
+        <div class="content-container">
+            <div class="title">
+                <h1>Favorited Artists</h1>
+            </div>
+            <div class="content">
+                <ul>
+                    <% artists.forEach((artist)=> { %>
+                        <li>
+                            <%= artist.name %>
+                                <button type="button" class="edit">
+                                    <a href="/artist/edit/<%= artist.id %>">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                </button>
+                                <form method="POST" action="/artist/<%= artist.id %>?_method=delete" style="display: inline;">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="circle">
+                                        <i class="far fa-times-circle"></i>
+                                    </button>
+                                </form>
+                        </li>
+                        <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
     <%- include('../partials/footer')%>

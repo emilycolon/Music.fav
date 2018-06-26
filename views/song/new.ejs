@@ -1,27 +1,32 @@
 <%- include('../partials/header')%>
-
-  <h1>Favorite a New Song</h1>
-
-  <form action="/song" method="post" accept-charset="utf-8">
-    <p>
-      <label>Song Title:</label>
-      <input type="text" name="title">
-    </p>
-    <p>
-      <label>Album Title:</label>
-      <input type="text" name="albumTitle">
-    </p>
-    <p>
-      <label>Artist: </label>
-      <select name="artistId">
-        <% artists.forEach((artist)=> { %>
-          <option value="<%= artist.id %>">
-            <%= artist.name %>
-          </option>
-          <% }); %>
-      </select>
-    </p>
-    <input type="submit" value="Favorite">
-  </form>
-
+<div class="flex">
+  <div class="content-container">
+    <div class="title">
+      <h1>Favorite a New Song</h1>
+    </div>
+    <div class="content">
+      <form action="/song" method="post" accept-charset="utf-8">
+        <p>
+          <label>Song Title:</label>
+          <input type="text" name="title">
+        </p>
+        <p>
+          <label>Album Title:</label>
+          <input type="text" name="albumTitle">
+        </p>
+        <p>
+          <label>Artist: </label>
+          <select name="artistId">
+            <% artists.forEach((artist)=> { %>
+              <option value="<%= artist.id %>">
+                <%= artist.name %>
+              </option>
+              <% }); %>
+          </select>
+        </p>
+        <input type="submit" value="Favorite">
+      </form>
+    </div>
+  </div>
+</div>
   <%- include('../partials/footer')%>

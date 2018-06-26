@@ -110,7 +110,66 @@ img {
 
 /* content styling */
 
-h1 {
+.content-container {
+    width: 900px;
+    display: grid;
+    grid-template-columns: 350px 550px;
+    justify-content: center;
+}
+
+.title {
     /* font-family: 'Bungee Inline', cursive; */
     font-family: 'Bungee', cursive;
+    letter-spacing: 1px;
+    grid-column: 1 / span 1;
+    text-align: right;
+}
+
+.content {
+    display: inline-block;
+    grid-column: 2 / span 1;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+}
+
+i {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+button {
+    background-color: #000000;
+    border: solid 1px white;
+    border-radius: 50%;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.3s;
+    /* Safari */
+    transition-duration: 0.3s;
+}
+
+button:hover, .edit:hover {
+    background-color: blue;
+    color: white;
+}
+
+button:hover, .circle:hover {
+    background-color: red;
+    color: white;
 }

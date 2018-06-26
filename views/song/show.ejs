@@ -1,28 +1,38 @@
 <%- include('../partials/header')%>
-
-    <h1>Favorited Songs</h1>
-
-    <ul>
-        <% songs.forEach((song) => { %>
-            <li>
-                "<%= song.title %>" by
-                    <% artists.forEach((artist) => { %>
-                        <% if (artist.id === song.artistId) { %>
-                            <% return name = artist.name; %>
-                                <% }; %>
-                                    <% }); %>
-                                        <%= name %>
-                                        <a href="/song/edit/<%= song.id %>">
-                                            <i class="far fa-edit"></i>
-                                        </a>
-                                        <form method="POST" action="/song/<%= song.id %>?_method=delete">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit">
-                                            <i class="far fa-times-circle"></i>
-                                        </button>
-                                        </form>
-            </li>
-            <% }); %>
-    </ul>
-
+    <div class="flex">
+        <div class="content-container">
+            <div class="title">
+                <h1>Favorited
+                    <br>Songs</h1>
+            </div>
+            <div class="content">
+                <ul>
+                    <% songs.forEach((song) => { %>
+                        <li>
+                            "
+                            <%= song.title %>" by
+                                <% artists.forEach((artist) => { %>
+                                    <% if (artist.id === song.artistId) { %>
+                                        <% return name = artist.name; %>
+                                            <% }; %>
+                                                <% }); %>
+                                                    <%= name %>
+                                                        <br>
+                                                        <button type="button" class="edit">
+                                                            <a href="/song/edit/<%= song.id %>">
+                                                                <i class="far fa-edit"></i>
+                                                            </a>
+                                                        </button>
+                                                        <form method="POST" action="/song/<%= song.id %>?_method=delete" style="display: inline;">
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button type="submit" class="circle">
+                                                                <i class="far fa-times-circle"></i>
+                                                            </button>
+                                                        </form>
+                        </li>
+                        <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
     <%- include('../partials/footer')%>

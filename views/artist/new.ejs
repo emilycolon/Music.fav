@@ -1,13 +1,18 @@
 <%- include('../partials/header')%>
-
-<h1>Favorite a New Artist</h1>
-
-<form action="/artist" method="post" accept-charset="utf-8">
-  <p>
-    <label>Artist Name:</label>
-    <input type="text" name="name"/>
-  </p>
-  <input type="submit" value="Favorite" />
-</form>
-
-<%- include('../partials/footer')%>
+<div class="flex">
+  <div class="content-container">
+    <div class="title">
+      <h1>Favorite a New Artist</h1>
+    </div>
+    <div class="content">
+      <form action="/artist" method="post" accept-charset="utf-8">
+        <p>
+          <label>Artist Name:</label>
+          <input type="text" name="name" />
+        </p>
+        <input type="submit" value="Favorite" />
+      </form>
+    </div>
+  </div>
+</div>
+  <%- include('../partials/footer')%>
