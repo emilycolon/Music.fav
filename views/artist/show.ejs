@@ -9,14 +9,11 @@
                     <% artists.forEach((artist)=> { %>
                         <li>
                             <%= artist.name %>
-                                <button type="button" class="edit">
-                                    <a href="/artist/edit/<%= artist.id %>">
-                                        <i class="far fa-edit"></i>
-                                    </a>
-                                </button>
+                                <a href="/artist/edit/<%= artist.id %>" class="edit">
+                                    <i class="far fa-edit"></i>
+                                </a>
                                 <form method="POST" action="/artist/<%= artist.id %>?_method=delete" style="display: inline;">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" class="circle">
+                                    <button type="submit" name="_method" value="DELETE" class="circle">
                                         <i class="far fa-times-circle"></i>
                                     </button>
                                 </form>

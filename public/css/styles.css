@@ -1,8 +1,8 @@
 /* image hover overlay found at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lato', sans-serif;
@@ -74,8 +74,8 @@ img {
 .nav-link {
     opacity: 1;
     padding: 15px 5px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
@@ -142,18 +142,18 @@ ul {
 }
 
 i {
-    color: white;
+    color: #ffffff;
 }
 
 a:visited {
-    color: white;
+    color: #ffffff;
 }
 
 button {
     background-color: #000000;
-    border: solid 1px white;
+    border: solid 1px #ffffff;
     border-radius: 50%;
-    color: white;
+    color: #ffffff;
     padding: 8px 8px;
     text-align: center;
     text-decoration: none;
@@ -164,12 +164,43 @@ button {
     transition-duration: 0.3s;
 }
 
-button:hover, .edit:hover {
-    background-color: blue;
+a:hover, .edit:hover {
+    background-color: #4164fc;
+    color: #ffffff;
+}
+
+a:hover, .circle:hover {
+    background-color: #b80303;
+    color: #ffffff;
+}
+
+input, select {
+    width: 300px;
+    padding: 10px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 150px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
     color: white;
 }
 
-button:hover, .circle:hover {
-    background-color: red;
-    color: white;
+input[type=submit]:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 12px;
 }
