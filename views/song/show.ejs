@@ -12,10 +12,15 @@
                                 <% }; %>
                                     <% }); %>
                                         <%= name %>
-                                            <a href="/song/edit/<%= song.id %>">EDIT BUTTON</a>
-                                            <form action="/song/<%= song.id %>?_method=delete" method="post">
-                                                <input type="submit" value="Remove">
-                                            </form>
+                                        <a href="/song/edit/<%= song.id %>">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <form method="POST" action="/song/<%= song.id %>?_method=delete">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit">
+                                            <i class="far fa-times-circle"></i>
+                                        </button>
+                                        </form>
             </li>
             <% }); %>
     </ul>

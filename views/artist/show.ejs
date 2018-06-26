@@ -9,14 +9,12 @@
                     <a href="/artist/edit/<%= artist.id %>">
                         <i class="far fa-edit"></i>
                     </a>
-
                     <form method="POST" action="/artist/<%= artist.id %>?_method=delete">
                         <input type="hidden" name="_method" value="DELETE">
                         <button type="submit">
                             <i class="far fa-times-circle"></i>
                         </button>
                     </form>
-
             </li>
             <% }); %>
     </ul>

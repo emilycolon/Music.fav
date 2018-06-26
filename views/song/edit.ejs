@@ -7,11 +7,11 @@
   <form action="/song/<%= song.id %>?_method=put" method="post">
     <p>
       <label>Song Title:</label>
-      <input type="text" name="title">
+      <input type="text" value="<%= song.title %>" name="title">
     </p>
     <p>
       <label>Album Title:</label>
-      <input type="text" name="albumTitle">
+      <input type="text" value="<%= song.albumTitle %>" name="albumTitle">
     </p>
     <p>
       <label>Artist: </label>
@@ -23,7 +23,7 @@
           <% }); %>
       </select>
     </p>
-    <input type="submit" value="Favorite">
+    <input type="submit" value="Update">
   </form>
 
   <%- include('../partials/footer')%>
