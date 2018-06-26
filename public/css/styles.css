@@ -1,8 +1,11 @@
+/* image hover overlay found at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
+
 body {
     background-color: black;
     color: white;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Lato', sans-serif;
 }
 
 .flex {
@@ -108,5 +111,5 @@ img {
 }
 
 /* font-family: 'Bungee Inline', cursive;
-font-family: 'Lato', sans-serif;
+
 font-family: 'Bungee', cursive; */
