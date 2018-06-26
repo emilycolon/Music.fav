@@ -1,29 +1,54 @@
 <%- include('partials/header') %>
-<div class="flex">
-    <div class="grid-container">
-        <div class="logo">
-            <img src="/imgs/logo.png">
-        </div>
-        <div class="item one">
-            <a href="/artist" class="artist nav-link">
-                See All Artists
-            </a>
-        </div>
-        <div class="item two">
-            <a href="/song" class="add-artist nav-link">
-                See All Songs
-            </a>
-        </div>
-        <div class="item three">
-            <a href="/artist/new" class="song nav-link">
-                Add a New Artist
-            </a>
-        </div>
-        <div class="item four">
-            <a href="/song/new" class="add-song nav-link">
-                Add a New Song
-            </a>
+    <div class="flex">
+        <div class="grid-container">
+            <div class="logo">
+                <img src="/imgs/logo.png">
+            </div>
+            <div class="hover-container one">
+                <div class="item one">
+                    <div class="middle">
+                        <div class="nav-link">
+                            <a href="/artist" class="artist nav-link">
+                                See All Artists
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hover-container two">
+                <div class="item two">
+                    <div class="middle">
+                        <div class="nav-link">
+                            <a href="/song" class="add-artist nav-link">
+                                See All Songs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hover-container three">
+                <div class="item three">
+                    <div class="middle">
+                        <div class="nav-link">
+                            <a href="/artist/new" class="song nav-link">
+                                Add a New Artist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hover-container four">
+                <div class="item four">
+                    <div class="middle">
+                        <div class="nav-link">
+                            <a href="/song/new" class="add-song nav-link">
+                                Add a New Song
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
     <%- include('partials/footer') %>

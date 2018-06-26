@@ -32,14 +32,55 @@ img {
     align-items: center;
 }
 
+.hover-container {
+    position: relative;
+}
+
 .item {
     height: 296px;
     display: grid;
     justify-content: center;
     align-content: center;
-    z-index: -1;
+    opacity: 1;
+    transition: .5s ease;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hover-container:hover .item {
+    opacity: 0.3;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hover-container:hover .middle {
+    opacity: 1;
+    padding: 15px 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-link {
+    opacity: 1;
+    padding: 15px 5px;
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
 
 .one {
@@ -65,24 +106,6 @@ img {
     grid-column: 3 / span 2;
     background-image: url('/imgs/music4.jpg');
 }
-
-.nav-link {
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    visibility: visible;
-}
-
-/* .nav-link:hover {
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    visibility: hidden;
-} */
 
 /* font-family: 'Bungee Inline', cursive;
 font-family: 'Lato', sans-serif;
