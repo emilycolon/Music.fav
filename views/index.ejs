@@ -1,18 +1,29 @@
 <%- include('partials/header') %>
-
-    <a href="/artist" class="">
-        <img src="/imgs/music1.jpg" alt="See All Artists">
-    </a>
-    <a href="/song" class="">
-        <img src="/imgs/music2.jpg" alt="See All Songs">
-    </a>
-    <h1 class="h1-logo">MUSIC.FAV</h1>
-    <h3 class="h3-logo">ALL OF YOUR FAVORITES. ALL IN ONE SPOT.</h3>
-    <a href="/artist/new" class="">
-        <img src="/imgs/music3.jpg" alt="Add a New Artist">
-    </a>
-    <a href="/song/new" class="">
-        <img src="/imgs/music4.jpg" alt="Add a New Song">
-    </a>
-
+<div class="flex">
+    <div class="grid-container">
+        <div class="logo">
+            <img src="/imgs/logo.png">
+        </div>
+        <div class="item one">
+            <a href="/artist" class="artist nav-link">
+                See All Artists
+            </a>
+        </div>
+        <div class="item two">
+            <a href="/song" class="add-artist nav-link">
+                See All Songs
+            </a>
+        </div>
+        <div class="item three">
+            <a href="/artist/new" class="song nav-link">
+                Add a New Artist
+            </a>
+        </div>
+        <div class="item four">
+            <a href="/song/new" class="add-song nav-link">
+                Add a New Song
+            </a>
+        </div>
+    </div>
+</div>
     <%- include('partials/footer') %>
