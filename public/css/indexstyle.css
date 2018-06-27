@@ -1,8 +1,8 @@
 /* image hover overlay found at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #FFFFFF;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lato', sans-serif;
@@ -78,8 +78,8 @@ img {
 .nav-link {
     opacity: 1;
     padding: 15px 5px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #FFFFFF;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;

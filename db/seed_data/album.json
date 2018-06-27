@@ -1,0 +1,26 @@
+[
+    {
+      "artistId": 1,
+      "albumTitle": "Trilogy"
+    },
+    {
+      "artistId": 1,
+      "albumTitle": "Starboy"
+    },
+    {
+      "artistId": 2,
+      "albumTitle": "Dirty Computer"
+    },
+    {
+      "artistId": 4,
+      "albumTitle": "AM"
+    },
+    {
+      "artistId": 3,
+      "albumTitle": "Music To Make Love To Your Old Lady By"
+    },
+    {
+      "artistId": 1,
+      "albumTitle": "The Beauty Behind The Madness"
+    }
+  ]

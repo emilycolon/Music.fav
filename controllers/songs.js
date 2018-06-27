@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Artist, Song } = require('../db/connection').models;
-const queryArtist = { include: [{ model: Artist }] };
+const { Artist, Album, Song } = require('../db/connection').models;
 
 // new song
 router.get('/song/new', (req, res) => {
@@ -29,7 +28,9 @@ router.get('/song', (req, res) => {
 // post new song
 router.post('/song', (req, res) => {
   Song.create(req.body).then(songs => {
-    res.redirect('/song');
+    Album.create(req.body).then(albums => {
+      res.redirect('/song');
+    });
   });
 });
 

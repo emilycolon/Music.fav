@@ -7,10 +7,15 @@ const sequelize = new Sequelize('music', 'inclassuser', 'Hartford1810', {
 });
 
 const Artist = sequelize.import('../models/Artist');
+const Album = sequelize.import('../models/Album');
 const Song = sequelize.import('../models/Song');
 
-Song.belongsTo(Artist);
+Artist.hasMany(Album);
 Artist.hasMany(Song);
+Album.hasMany(Song);
+Album.belongsTo(Artist);
+Song.belongsTo(Artist);
+Song.belongsTo(Album);
 
 sequelize.authenticate().then(() => {
   console.log('Connected');
@@ -21,6 +26,7 @@ module.exports = {
   sequelize,
   models: {
     Artist,
+    Album,
     Song
   }
 };

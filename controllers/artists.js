@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Artist, Song } = require('../db/connection').models;
-const querySong = { include: [{ model: Song }] };
+const { Artist, Album, Song } = require('../db/connection').models;
 
 // see all favorited artists
 router.get('/artist', (req, res) => {
@@ -47,12 +46,20 @@ router.delete('/artist/:id', (req, res) => {
           artistId: req.params.id
         }
       }).then(artist => {
-        Artist.destroy({
-          where: {
-            id: req.params.id
-          }
-        }).then(() => {
-          res.redirect('/artist');
+        Album.findAll().then(album => {
+          Album.destroy({
+            where: {
+              artistId: req.params.id
+            }
+          }).then(artist => {
+            Artist.destroy({
+              where: {
+                id: req.params.id
+              }
+            }).then(() => {
+              res.redirect('/artist');
+            });
+          });
         });
       });
     });

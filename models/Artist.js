@@ -9,6 +9,12 @@ module.exports = (sequelize, DataTypes) => {
       as: 'songs'
     });
   };
+  Artist.associate = models => {
+    Artist.hasMany(models.Album, {
+      foreignKey: 'artistId',
+      as: 'albums'
+    });
+  };
 
   return Artist;
 };
