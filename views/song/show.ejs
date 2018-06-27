@@ -18,8 +18,7 @@
                                                 <% }); %>
                                                     <%= name %>
                                                         <br>
-                                                        <a href="/song/edit/<%= song.id %>" class="edit">
-                                                            <i class="far fa-edit"></i>
+                                                        <a href="/song/edit/<%= song.id %>" class="edit"><i class="far fa-edit"></i>
                                                         </a>
                                                         <form method="POST" action="/song/<%= song.id %>?_method=delete" style="display: inline;">
                                                             <button type="submit" name="_method" value="DELETE" class="circle">
