@@ -38,5 +38,65 @@
     "artistId": 1,
     "albumId": 6,
     "title": "The Hills"
+  },
+  {
+    "artistId": 1,
+    "albumId": 2,
+    "title": "Starboy"
+  },
+  {
+    "artistId": 2,
+    "albumId": 3,
+    "title": "Make Me Feel"
+  },
+  {
+    "artistId": 1,
+    "albumId": 6,
+    "title": "Can't Feel My Face"
+  },
+  {
+    "artistId": 5,
+    "albumId": 9,
+    "title": "Toxic"
+  },
+  {
+    "artistId": 5,
+    "albumId": 8,
+    "title": "Oops!... I Did It Again"
+  },
+  {
+    "artistId": 5,
+    "albumId": 8,
+    "title": "Stronger"
+  },
+  {
+    "artistId": 5,
+    "albumId": 7,
+    "title": "...Baby One More Time"
+  },
+  {
+    "artistId": 6,
+    "albumId": 10,
+    "title": "Poker Face"
+  },
+  {
+    "artistId": 6,
+    "albumId": 10,
+    "title": "Just Dance"
+  },
+  {
+    "artistId": 6,
+    "albumId": 11,
+    "title": "Joanne"
+  },
+  {
+    "artistId": 6,
+    "albumId": 1,
+    "title": "Perfect Illusion"
+  },
+  {
+    "artistId": 6,
+    "albumId": 1,
+    "title": "Million Reasons"
   }
 ]

@@ -1,26 +1,46 @@
 [
-    {
-      "artistId": 1,
-      "albumTitle": "Trilogy"
-    },
-    {
-      "artistId": 1,
-      "albumTitle": "Starboy"
-    },
-    {
-      "artistId": 2,
-      "albumTitle": "Dirty Computer"
-    },
-    {
-      "artistId": 4,
-      "albumTitle": "AM"
-    },
-    {
-      "artistId": 3,
-      "albumTitle": "Music To Make Love To Your Old Lady By"
-    },
-    {
-      "artistId": 1,
-      "albumTitle": "The Beauty Behind The Madness"
-    }
-  ]
+  {
+    "artistId": 1,
+    "albumTitle": "Trilogy"
+  },
+  {
+    "artistId": 1,
+    "albumTitle": "Starboy"
+  },
+  {
+    "artistId": 2,
+    "albumTitle": "Dirty Computer"
+  },
+  {
+    "artistId": 4,
+    "albumTitle": "AM"
+  },
+  {
+    "artistId": 3,
+    "albumTitle": "Music To Make Love To Your Old Lady By"
+  },
+  {
+    "artistId": 1,
+    "albumTitle": "Beauty Behind The Madness"
+  },
+  {
+    "artistId": 5,
+    "albumTitle": "...Baby One More Time"
+  },
+  {
+    "artistId": 5,
+    "albumTitle": "Oops!... I Did It Again"
+  },
+  {
+    "artistId": 5,
+    "albumTitle": "In the Zone"
+  },
+  {
+    "artistId": 6,
+    "albumTitle": "The Fame"
+  },
+  {
+    "artistId": 6,
+    "albumTitle": "Joanne"
+  }
+]
