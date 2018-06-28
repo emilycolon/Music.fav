@@ -9,6 +9,9 @@
                     <% artists.forEach((artist)=> { %>
                         <li>
                             <%= artist.name %>
+                                <a href="/artist/sort/<%= artist.id %>" class="sort">
+                                    <i class="fas fa-music"></i>
+                                </a>
                                 <a href="/artist/edit/<%= artist.id %>" class="edit">
                                     <i class="far fa-edit"></i>
                                 </a>

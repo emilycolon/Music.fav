@@ -19,6 +19,25 @@ router.get('/artist/edit/:id', (req, res) => {
   });
 });
 
+// sort by artist
+router.get('/artist/sort/:id', (req, res) => {
+  Artist.findById(req.params.id).then(artist => {
+    Album.findAll({
+      where: {
+        artistId: req.params.id
+      }
+    }).then(albums => {
+      Song.findAll({
+        where: {
+          artistId: req.params.id
+        }
+      }).then(songs => {
+        res.render('artist/sort', { artist, albums, songs });
+      });
+    });
+  });
+});
+
 // post new artist
 router.post('/artist', (req, res) => {
   Artist.create(req.body).then(artists => {

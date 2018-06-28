@@ -1,0 +1,33 @@
+<%- include('../partials/header')%>
+  <div class="flex">
+    <div class="content-container">
+      <div class="title">
+        <h1>Favorite a New Album</h1>
+      </div>
+      <div class="content">
+        <form action="/album/new" method="post" accept-charset="utf-8">
+          <p>
+            <label>Artist: </label>
+            <select name="artistId">
+              <% artists.forEach((artist)=> { %>
+                <option value="<%= artist.id %>">
+                  <%= artist.name %>
+                </option>
+                <% }); %>
+            </select>
+          </p>
+          <p>
+            <h4>Artist not listed? Go ahead and click
+              <a href="/artist/new" style="text-decoration: underline; text-decoration-style: solid;">here</a>
+            </h4>
+          </p>
+          <p>
+            <label>Album Title:</label>
+            <input type="text" name="albumTitle">
+          </p>
+          <input type="submit" value="Favorite">
+        </form>
+      </div>
+    </div>
+  </div>
+  <%- include('../partials/footer')%>

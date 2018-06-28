@@ -4,15 +4,21 @@ const { Artist, Album, Song } = require('../db/connection').models;
 
 // new song
 router.get('/song/new', (req, res) => {
-  Artist.findAll().then(artists => res.render('song/new', { artists }));
+  Artist.findAll().then(artists => {
+    Album.findAll().then(albums => {
+      res.render('song/new', { artists, albums });
+    });
+  });
 });
 
 // edit song
 router.get('/song/edit/:id', (req, res) => {
   Song.findById(req.params.id).then(song => {
-    Artist.findAll().then(artists =>
-      res.render('song/edit', { song, artists })
-    );
+    Artist.findAll().then(artists => {
+      Album.findAll().then(albums => {
+        res.render('song/edit', { song, artists, albums });
+      });
+    });
   });
 });
 
@@ -20,17 +26,17 @@ router.get('/song/edit/:id', (req, res) => {
 router.get('/song', (req, res) => {
   Song.findAll().then(songs => {
     Artist.findAll().then(artists => {
-      res.render('song/show', { songs, artists });
+      Album.findAll().then(albums => {
+        res.render('song/show', { songs, artists, albums });
+      });
     });
   });
 });
 
 // post new song
 router.post('/song', (req, res) => {
-  Song.create(req.body).then(songs => {
-    Album.create(req.body).then(albums => {
-      res.redirect('/song');
-    });
+  Song.create(req.body).then(song => {
+    res.redirect('/song');
   });
 });
 

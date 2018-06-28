@@ -3,6 +3,7 @@ const methodOverride = require('method-override');
 const parser = require('body-parser');
 const mainController = require('./controllers/main');
 const artistController = require('./controllers/artists');
+const albumController = require('./controllers/albums');
 const songController = require('./controllers/songs');
 const app = express();
 
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', mainController);
 app.use('/', artistController);
+app.use('/', albumController);
 app.use('/', songController);
 
 app.listen(3000, () => {
