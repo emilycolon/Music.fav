@@ -15,15 +15,16 @@ body {
 }
 
 .grid-container {
-    width: 800px;
-    height: 600px;
+    padding-top: 20%;
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-rows: 195px 97px 97px 195px;
-    grid-template-columns: 98px 294px 294px 98px;
+    grid-template-rows: 3fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
 }
 
 img {
-    width: 388px;
+    width: 80%;
 }
 
 .logo {
@@ -40,7 +41,7 @@ img {
 }
 
 .item {
-    height: 296px;
+    height: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -110,12 +111,45 @@ img {
     background-image: url('/imgs/music4.jpg');
 }
 
+.nav-link-small {
+    display: none;
+}
+
 footer {
     text-align: center;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 5%;
     font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 100%;
+    }
+    .middle {
+        visibility: hidden;
+    }
+    .hover-container:hover .item {
+        visibility: hidden;
+    }
+    .hover-container:hover .middle {
+        visibility: hidden;
+    }
+    .nav-link {
+        visibility: hidden;
+    }
+    .nav-link-small {
+        display: block;
+        padding-top: 5%;
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+    }
+    .nav-link-small:hover {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
