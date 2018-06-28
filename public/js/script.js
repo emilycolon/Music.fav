@@ -3,7 +3,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
   const token =
     'BQAzhMzQ1V3AAXTlcjAokP_ieM0BKgot0E1D3Hryx_n2HGeviLw1spWu2VbiosAHzdUf8F07ezCGzdcp88CBZrkV5zH9CPTaN_FpjgOWqOny3Pai502D0IJ69MF_AFBoTEG0vFKlxn0c0KWVaabBp4FYTzcDiofP';
   const player = new Spotify.Player({
-    name: 'Web Playback SDK Quick Start Player',
+    name: 'music.fav',
     getOAuthToken: cb => {
       cb(token);
     }
@@ -39,5 +39,8 @@ window.onSpotifyWebPlaybackSDKReady = () => {
   });
 
   // Connect to the player!
-  player.connect();
-};
+  player.connect().then(success => {
+    if (success) {
+      console.log('The Web Playback SDK successfully connected to Spotify!');
+    }
+  });
