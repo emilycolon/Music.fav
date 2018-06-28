@@ -2,8 +2,8 @@
     <div class="flex">
         <div class="content-container">
             <div class="title">
-                <h1>Favorited
-                    <br>Songs</h1>
+                <h1>Favorited</h1>
+                    <h1>Songs</h1>
             </div>
             <div class="content">
                 <ul>
@@ -18,10 +18,10 @@
                                                 <% }); %>
                                                     <%= name %>
                                                         <br>
-                                                        <a href="/song/edit/<%= song.id %>" class="edit"><i class="far fa-edit"></i>
+                                                        <a href="/song/edit/<%= song.id %>" class="edit" title="Edit Song"><i class="far fa-edit"></i>
                                                         </a>
                                                         <form method="POST" action="/song/<%= song.id %>?_method=delete" style="display: inline;">
-                                                            <button type="submit" name="_method" value="DELETE" class="circle">
+                                                            <button type="submit" name="_method" value="DELETE" class="circle" title="Delete Song">
                                                                 <i class="far fa-times-circle"></i>
                                                             </button>
                                                         </form>

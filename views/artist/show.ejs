@@ -2,21 +2,22 @@
     <div class="flex">
         <div class="content-container">
             <div class="title">
-                <h1>Favorited Artists</h1>
+                <h1>Favorited</h1>
+                <h1>Artists</h1>
             </div>
             <div class="content">
                 <ul>
                     <% artists.forEach((artist)=> { %>
                         <li>
                             <%= artist.name %>
-                                <a href="/artist/sort/<%= artist.id %>" class="sort">
+                                <a href="/artist/sort/<%= artist.id %>" class="sort" title="Sort by Artist">
                                     <i class="fas fa-music"></i>
                                 </a>
-                                <a href="/artist/edit/<%= artist.id %>" class="edit">
+                                <a href="/artist/edit/<%= artist.id %>" class="edit" title="Edit Artist">
                                     <i class="far fa-edit"></i>
                                 </a>
                                 <form method="POST" action="/artist/<%= artist.id %>?_method=delete" style="display: inline;">
-                                    <button type="submit" name="_method" value="DELETE" class="circle">
+                                    <button type="submit" name="_method" value="DELETE" class="circle" title="Delete Artist">
                                         <i class="far fa-times-circle"></i>
                                     </button>
                                 </form>
