@@ -1,7 +1,5 @@
 # GA WDI Project 2 - Express App - music.fav
 
-## Project Idea and Initial Planning
-
 ## Final Application
 
 https://music-fav-2018.herokuapp.com/
