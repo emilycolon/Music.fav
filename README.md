@@ -34,8 +34,33 @@ Frameworks, Libraries, etc: NodeJS, body-parser, ejs, express, method-override, 
 
 ## Installation Instructions / Getting Started
 
-This section should walk a reader, step by step, through the process of setting up your project
-For an application, this would likely outline the process of forking, cloning, and starting the app locally
+In order to run this app locally, you will need for fork and clone this repo to your local machine. You will also need [Node.js](https://nodejs.org/en/) in order to install and run the various modules needed to properly run this app.
+
+Once cloned down to your local machine, run the following npm install command in the project directoy:
+
+```
+$ npm install body-parser ejs express method-override pg pg-hstore sequelize
+```
+
+This will install all of the neccessary dependencies. You will then want to migrate and seed the provided data.
+
+```
+node db/migrate.js
+```
+
+then
+
+```
+node db/seed.js
+```
+
+Once migrated and seeded, you can start an instance of a local server by entering
+
+```
+node index.js
+```
+
+In your web browser, go to `localhost:3000`. This will load the application!
 
 ## Contribution Guidelines
 
