@@ -42,22 +42,29 @@ Once cloned down to your local machine, run the following npm install command in
 $ npm install body-parser ejs express method-override pg pg-hstore sequelize
 ```
 
-This will install all of the neccessary dependencies. You will then want to migrate and seed the provided data.
+This will install all of the neccessary dependencies. You will then need to create a database for this project, named `music`. Using pSQL and postgres, you'll enter the following commands:
 
 ```
-node db/migrate.js
+$ psql -U postgres
+
+postgres=# CREATE DATABASE music;
+
+postgres=# GRANT ALL PRIVILEGES ON DATABASE music TO inclassuser;
 ```
 
-then
+You will then migrate and seed the provided data into your new database.
 
 ```
-node db/seed.js
+$ node db/migrate.js
+
+
+$ node db/seed.js
 ```
 
 Once migrated and seeded, you can start an instance of a local server by entering
 
 ```
-node index.js
+$ node index.js
 ```
 
 In your web browser, go to `localhost:3000`. This will load the application!
