@@ -4,26 +4,31 @@
         <div class="content-container">
             <div class="title">
                 <h1>All Music by</h1>
-                <h1><%= artist.name %></h1>
+                <h1>
+                    <%= artist.name %>
+                </h1>
             </div>
             <div class="content">
                 <% albums.forEach((album) => { %>
-                    <h2><%= album.albumTitle %></h2>
+                    <h2>
+                        <%= album.albumTitle %>
+                    </h2>
                     <ul>
                         <% songs.forEach((song) => { %>
                             <% if (song.albumId === album.id) { %>
                                 <li>
                                     <%= song.title %>
-                                    <a href="/song/edit/<%= song.id %>" class="edit"><i class="far fa-edit"></i>
-                                    </a>
-                                    <form method="POST" action="/song/<%= song.id %>?_method=delete" style="display: inline;">
-                                        <button type="submit" name="_method" value="DELETE" class="circle">
-                                            <i class="far fa-times-circle"></i>
-                                        </button>
-                                    </form>
+                                        <a href="/song/edit/<%= song.id %>" class="edit">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <form method="POST" action="/song/<%= song.id %>?_method=delete" style="display: inline;">
+                                            <button type="submit" name="_method" value="DELETE" class="circle">
+                                                <i class="far fa-times-circle"></i>
+                                            </button>
+                                        </form>
                                 </li>
                                 <% }; %>
-                            <% }); %>
+                                    <% }); %>
                     </ul>
                     <% }); %>
             </div>
