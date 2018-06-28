@@ -4,28 +4,35 @@
 
 ## Final Application
 
-- link to github repo
-- link to deployed app on heroku
+https://music-fav-2018.herokuapp.com/
 
 ## Description
 
-What your project is / should be used for
-What problem(s) your projects solves
+This application allows a user to track their favorite musicians, albums, and songs.
 
 ## Brief Example
 
-This could be a screenshot of your project running in the browser (if it is a stand-alone application)
+### Homepage
+
+![Homepage](/planning/homepage.jpg)
+
+### View by Artist page
+
+![View All By Artist page](/planning/pageview.jpg)
 
 ## List of Features / User Stories
 
-This typically will be a short list of the features / user stories that you planned during the development phase of the project
-To provide more detail, you can show how you categorized these features into Bronze (MVP), Silver, and Gold Levels and indicate which features you complete / have yet to complete
+This app allows a user to track their favorite musicians and view a list of all favorite artists. They can also add songs and albums and then view all favorited songs, or all songs (sorted by album) for each favorited artist.
+
+When planning, my Bronze level included allowing the user to track artists and songs. Silver included the ability to track albums. My Gold level project was to also incorporate playback of favorited songs/artists/albums via Spotify. I utilized wire framing, an ERD model, and Trello to handle planning and project management. Documents can be viewed [here](https://git.generalassemb.ly/emilycolon/project-2/tree/master/planning).
+
+The deployed app is currently at Silver level. I was able to include basic code to allow my personal Spotify account to recognize the app/web browser as a "device" and remotely control playback through the opened browser. Further Gold level development would include allowing control of the playback in the app itself as well as the ability to see selected songs/artists/albums and have those available for playback.
 
 ## List of Technologies Used
 
-Often you will want to list the technologies you used to create the project.
-This typically would consist of all primary languages, frameworks, and libraries your app is composed of
-This is particularly important when it comes to recruiters scanning your projects for keywords
+Languages: HTML, CSS, JavaScript
+
+Frameworks, Libraries, etc: NodeJS, body-parser, ejs, express, method-override, pg, pg-hstore, and sequelize
 
 ## Installation Instructions / Getting Started
 
@@ -34,7 +41,6 @@ For an application, this would likely outline the process of forking, cloning, a
 
 ## Contribution Guidelines
 
-This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements
-Good links to include are:
-A link to the project's main repository
-A link to the project's issue tracker
+The project repo is located [here](https://git.generalassemb.ly/emilycolon/project-2).
+
+Issues can be submitted [here](https://git.generalassemb.ly/emilycolon/project-2/issues).
